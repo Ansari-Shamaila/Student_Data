@@ -1,0 +1,37 @@
+body{
+    width: 100%;
+    background-image: url(cloud.webp);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+   }
+   #mainhead{
+    font-family: Arial;
+    font-size: 60px;
+    font-weight: bold;
+    background-image: linear-gradient(black,rgb(9, 9, 158),black);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+   }
+   #subhead1{
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    color: darkblue;
+   }
+   #subhead2{
+    font-family: Arial;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(94, 83, 83);
+    text-decoration: underline;
+    padding-bottom: 10px;
+    padding-top: 20px;
+   }   

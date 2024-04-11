@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StudentManagement</title>
+ <link rel="stylesheet" href="index.css">
+ <link rel="stylesheet" 
+ href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.m
+ in.css">
+ <script
+ src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+ <script 
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
+ "></script>
+ <script 
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min
+ .js"></script>
+ <script 
+ src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angularroute.js"></script>
+ <script type="text/javascript" src="app.js"></script>
+ <script type="text/javascript" 
+ src="employeecontroller.js"></script>
+ <script type="text/javascript" 
+ src="employeeservice.js"></script>
+ <script type="text/javascript" 
+ src="employeedirective.js"></script>
+ </head>
+ <body ng-app = "employeeApp">
+ <div class="container">
+ <h2 id="mainhead"><b>Student Management System</b></h2>
+ <div ng-controller = "EmployeeController as em">
+ <h2 id="subhead1"><b>Search Studnet</b></h2>
+ <div employee-search></div>
+ <h2 id="subhead2"><b>Student Details</b></h2>
+ <div employee-display></div>
+ </div>
+ </div>
+ </body>
+ </html>

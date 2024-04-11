@@ -1,0 +1,157 @@
+<div class="row" align="center">
+    <button type="button" class="btn btn-default btn-sm" data-toggle="collapse" 
+    data-target="#add">
+     <span class="glyphicon glyphicon-plus"></span> Add-Student</button><br>
+     
+     <div add-employee></div><br>
+     <!-- <div id="add" class="collapse">
+    <p>This is simple collaspe</p> -->
+    </div>
+</div>
+<div align="center" class="row" id="row">
+<div class="col-sm-12">
+<div class="col-xs-8 col-xs-offset-2 well">
+<table class="table table-hover table-scroll table-striped 
+">
+<thead class="headings">
+<th ng-click = "em.orderBy('id')" ng-dblclick = 
+"em.orderBy('-id')"><strong>ID</strong></th>
+<th ng-click = "em.orderBy('name')" ng-dblclick = 
+"em.orderBy('-name')"><strong>Name</strong></th>
+<th ng-click = "em.orderBy('rollno')" ng-dblclick = 
+"em.orderBy('-rollno')"><strong>Rollno</strong></th>
+<th ng-click = "em.orderBy('address')" ng-dblclick = 
+"em.orderBy('-address')"><strong>Address</strong></th>
+<th ng-click = "em.orderBy('department')" ng-dblclick = 
+"em.orderBy('-department')"><strong>Department</strong></th>
+<th ng-click = "em.orderBy('mobile')" ng-dblclick = 
+"em.orderBy('-mobile')"><strong>Mobile</strong></th>
+<th><strong>Action</strong></th>
+</thead>
+<tr ng-repeat = "e in em.employees | orderBy : em.ordering | 
+filter : {id : em.id, name : em.name,rollno:em.rollno, address : em.address, department: 
+em.department, mobile : em.mobile}">
+<td>{{e.id}}</td>
+<td>
+<div ng-hide = 
+"em.editorEnabled[$index]">
+{{e.name}}
+</div>
+<div ng-show = 
+"em.editorEnabled[$index]">
+<input type="text" 
+value="{{e.name}}" ng-model = "e.name"/>
+</div>
+</td>
+
+<td>
+    <div ng-hide = 
+    "em.editorEnabled[$index]">
+    {{e.rollno}}
+    </div>
+    <div ng-show = 
+    "em.editorEnabled[$index]">
+    <input type="text" 
+    value="{{e.rollno}}" ng-model = "e.rollno"/>
+    </div>
+    </td>
+<td>
+<div ng-hide = 
+"em.editorEnabled[$index]">
+{{e.address}}
+</div>
+<div ng-show = 
+"em.editorEnabled[$index]">
+<input type="text"
+value="{{e.address}}" ng-model = "e.address"/>
+</div>
+</td>
+<td>
+    <div ng-hide = 
+    "em.editorEnabled[$index]">
+    {{e.department}}
+    </div>
+    <div ng-show = 
+    "em.editorEnabled[$index]">
+    <select class="form-control" 
+    id="department" ng-model = "e.department" ng-selected = "e.department">
+     <option>Information Technology</option>
+    <option>Computer Engineering</option>
+    <option>AIDS</option>
+    <option>EXTC</option>
+    <option>ETRX</option>
+    <option>AURO</option>
+    <option>INSTRU</option>
+    <option>CIVIL</option>
+     </select>
+    </div>
+    </td>
+    <td>
+    <div ng-hide = 
+    "em.editorEnabled[$index]">
+    {{e.mobile}}
+    </div>
+    <div ng-show = 
+    "em.editorEnabled[$index]">
+    <input type="text" 
+    value="{{e.mobile}}" ng-model = "e.mobile"/>
+    </div>
+    </td>
+    <td>
+    <div ng-hide = 
+    "em.editorEnabled[$index]">
+    <button class="btn btn-info" ng-click = "em.enableEditor($index)">Edit</button>
+    <button class="btn btn-danger" 
+    ng-click = "em.deleteEmployee(e.id)">Delete</button>
+    </div>
+    <div ng-show = 
+    "em.editorEnabled[$index]">
+    <button class="btn btn-success" 
+    ng-click = "em.editEmployee($index, e.id, e.name,e.rollno, e.address, e.department, e.mobile) 
+    ">Save</button>
+    <button class="btn btn-danger" 
+    ng-click = "em.disableEditor($index)">Cancel</button>
+    </div>
+    </td>
+    </div>
+    </div>
+    </tr>
+    </table>
+    </div>
+    </div>
+    <style type="text/css">
+    .headings th{
+    font-size: 25px;
+    color: rgb(37, 37, 97);
+    }
+    .glyphicon-plus{
+    font-size: small;
+    }
+    .btn-default{
+    font-size: medium;
+    background-color: lightcyan;
+    }
+    #row{
+    margin-left: -450px;
+    }
+    .well {
+    background: none;
+    height: 430px;
+    width: 1500px;
+    }
+    .table-scroll tbody {
+position: absolute;
+overflow-y: scroll;
+height: 370px;
+}
+.table-scroll tr {
+width: 100%;
+table-layout: fixed;
+display: inline-table;
+font-size: 16px;
+font-weight: bolder ;
+}
+.table-scroll thead > tr > th {
+border: none;
+}
+</style>

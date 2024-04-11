@@ -1,0 +1,56 @@
+<div class="row" align="center">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-4">
+    <div id="add" class="collapse">
+    <form class="form-horizontal">
+     <div class="form-group"><br>
+     <label for="name" class="col-sm-5 controllabel">Name</label>
+     <div class="col-sm-7">
+     <input type="text" class="form-control" id="name" 
+    placeholder="Name" ng-model = "em.ename"/>
+     </div>
+     </div>
+     <div class="form-group">
+        <label for="rollno" class="col-sm-5 controllabel">Rollno</label>
+        <div class="col-sm-7">
+        <input type="text" class="form-control" id="rollno" 
+       placeholder="rollno" ng-model = "em.erollno"/>
+        </div>
+        </div>
+    <div class="form-group">
+     <label for="address" class="col-sm-5 controllabel">Address</label>
+     <div class="col-sm-7">
+     <input type="text" class="form-control" id="address" 
+    placeholder="Address" ng-model = "em.eaddress"/>
+     </div>
+     </div>
+     <div class="form-group">
+     <label for="department" class="col-sm-5 controllabel">Department</label>
+     <div class="col-sm-7">
+        <select class="form-control" id="department" ng-model = "em.edepartment">
+            <option>Information Technology</option>
+            <option>Computer Engineering</option>
+            <option>AIDS</option>
+            <option>EXTC</option>
+            <option>ETRX</option>
+            <option>AURO</option>
+            <option>INSTRU</option>
+            <option>CIVIL</option>
+        </select>
+        </div>
+        </div> 
+        <div class="form-group">
+        <label for="mobile" class="col-sm-5 controllabel">Mobile</label>
+        <div class="col-sm-7">
+        <input type="text" id="mobile" class="form-control" 
+       placeholder="9***-******" ng-model = "em.emobile"/>
+        </div>
+        </div>
+        <button type="Reset" class="btn btn-success" ng-click = 
+       "em.addEmployee()">Add</button>
+        <button type="Reset" class="btn btn-danger">Reset</button>
+       </form>
+       </div>
+       </div>
+       <div class="col-sm-5"></div>
+       </div>    
